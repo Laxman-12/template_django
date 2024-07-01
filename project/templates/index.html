@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+           {{title}}
+        </title>
+        <style>
+      .main{
+        background-color:pink;
+
+      }
+        </style>
+    </head>
+    <body>
+        {% for n in clist %}
+        <div class="main">{{forloop.last}} {{n}}</div>
+        {% endfor%}
+        
+        <table border="2" cellpadding ="10">
+            <tr>
+             <th> Name </th>
+              <th> Age </th>             
+            </tr>
+            {% for d in student_detail %}
+            <tr>
+                <td> {{d.name}} </td>
+                <td> {{d.roll}} </td>
+
+
+            </tr>
+            {% endfor %}
+        </table>
+        {% if numbers|length > 0 %}
+        
+              {% for n in numbers %}
+              {% if n > 15 %}
+            <div> {{n}}</div>
+            {% endif %}
+              {% endfor %}
+        {% else %}
+        no data found
+        {% endif%}
+        
+
+    </body>
+</html>
+
+
+
